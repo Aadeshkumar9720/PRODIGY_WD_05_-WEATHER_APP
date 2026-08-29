@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive weather application using the Open-Meteo weather API.">
+  <title>Weather App | Task 05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="weather-card">
+      <header class="header">
+        <div>
+          <h1>Weather App</h1>
+          <p class="subtitle">Know the weather. Plan your day.</p>
+        </div>
+        <div class="live-dot"><span></span> LIVE</div>
+      </header>
+
+      <form id="searchForm" class="search-box">
+        <label for="locationInput" class="sr-only">Enter city name</label>
+        <input
+          id="locationInput"
+          type="text"
+          placeholder="Enter city, e.g. New Delhi"
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="searchBtn">Search</button>
+        <button type="button" id="locationBtn" class="location-btn" title="Use my location" aria-label="Use my location">⌖</button>
+      </form>
+
+      <p id="message" class="message" aria-live="polite"></p>
+
+      <section id="weatherResult" class="weather-result hidden">
+        <div class="location-row">
+          <div>
+            <p class="label">CURRENT WEATHER</p>
+            <h2 id="cityName">—</h2>
+            <p id="localTime" class="muted">—</p>
+          </div>
+          <div id="weatherIcon" class="weather-icon">☀️</div>
+        </div>
+
+        <div class="main-weather">
+          <div>
+            <span id="temperature" class="temperature">--</span><span class="degree">°C</span>
+            <p id="condition" class="condition">—</p>
+          </div>
+          <div class="feels">
+            Feels like <strong id="feelsLike">--°C</strong>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span>💧</span>
+            <small>Humidity</small>
+            <strong id="humidity">--%</strong>
+          </div>
+          <div class="detail">
+            <span>💨</span>
+            <small>Wind</small>
+            <strong id="wind">-- km/h</strong>
+          </div>
+          <div class="detail">
+            <span>🌡️</span>
+            <small>Pressure</small>
+            <strong id="pressure">-- hPa</strong>
+          </div>
+          <div class="detail">
+            <span>☁️</span>
+            <small>Cloud Cover</small>
+            <strong id="cloud">--%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="forecast" class="forecast hidden">
+        <div class="section-title">
+          <h3>5-Day Forecast</h3>
+          <span>Daily outlook</span>
+        </div>
+        <div id="forecastGrid" class="forecast-grid"></div>
+      </section>
+
+      <p class="api-note">
+        Weather data powered by Open-Meteo API • No API key required
+      </p>
+    </section>
+
+    <footer>Built with HTML • CSS • JavaScript</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
