@@ -12,7 +12,7 @@ A responsive weather application built with HTML, CSS and JavaScript.
 - Displays a 5-day forecast
 - Responsive design for desktop, tablet and mobile
 - Loading and error states
-
+Webhook concurrency test
 ## API
 This project uses Open-Meteo:
 - Geocoding API for city search
