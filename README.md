@@ -14,6 +14,7 @@ A responsive weather application built with HTML, CSS and JavaScript.
 - Loading and error states
 Webhook concurrency test
 Retry failure recovery test
+Webhook failure recovery test
 ## API
 This project uses Open-Meteo:
 - Geocoding API for city search
