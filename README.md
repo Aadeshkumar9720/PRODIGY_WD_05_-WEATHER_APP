@@ -15,6 +15,7 @@ A responsive weather application built with HTML, CSS and JavaScript.
 Webhook concurrency test
 Retry failure recovery test
 Webhook failure recovery test test
+DevAI Hub Pull Request Integration Test
 ## API
 This project uses Open-Meteo:
 - Geocoding API for city search
