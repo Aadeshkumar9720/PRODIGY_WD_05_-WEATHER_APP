@@ -16,6 +16,8 @@ Webhook concurrency test
 Retry failure recovery test
 Webhook failure recovery test test
 DevAI Hub Pull Request Integration Test
+
+DevAI Hub merge test
 ## API
 This project uses Open-Meteo:
 - Geocoding API for city search
